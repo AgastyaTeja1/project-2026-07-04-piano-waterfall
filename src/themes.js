@@ -1,0 +1,98 @@
+/** Visual themes for the piano waterfall */
+
+export const THEMES = {
+  neon: {
+    name: 'Neon City',
+    background: '#0a0a1a',
+    backgroundGradient: ['#0a0a1a', '#0d0d2b'],
+    pianoWhite: '#e8e8ff',
+    pianoBlack: '#0d0d1a',
+    pianoWhiteActive: '#c8b4ff',
+    pianoBlackActive: '#7b5ea7',
+    pianoRim: '#1a1a3a',
+    trackColors: [
+      { base: '#ff6ec7', glow: '#ff00aa' },
+      { base: '#6ef0ff', glow: '#00d4ff' },
+      { base: '#ffe46e', glow: '#ffcc00' },
+      { base: '#a8ff6e', glow: '#66ff00' },
+      { base: '#ff8c6e', glow: '#ff5500' },
+      { base: '#b06eff', glow: '#8800ff' },
+      { base: '#6effa8', glow: '#00ff77' },
+      { base: '#ff6e6e', glow: '#ff0000' },
+    ],
+    grid: 'rgba(255,255,255,0.03)',
+    text: '#c8b4ff',
+  },
+  synthwave: {
+    name: 'Synthwave',
+    background: '#1a0533',
+    backgroundGradient: ['#1a0533', '#0d021a'],
+    pianoWhite: '#ffe8f8',
+    pianoBlack: '#1a0020',
+    pianoWhiteActive: '#ff80e5',
+    pianoBlackActive: '#9900aa',
+    pianoRim: '#2a0040',
+    trackColors: [
+      { base: '#ff71ce', glow: '#ff00cc' },
+      { base: '#01cdfe', glow: '#00aaff' },
+      { base: '#05ffa1', glow: '#00ff88' },
+      { base: '#b967ff', glow: '#9900ff' },
+      { base: '#fffb96', glow: '#ffee00' },
+      { base: '#ff9900', glow: '#ff6600' },
+      { base: '#fe4450', glow: '#ff0022' },
+      { base: '#5aff92', glow: '#00ff55' },
+    ],
+    grid: 'rgba(255,100,200,0.04)',
+    text: '#ff71ce',
+  },
+  ocean: {
+    name: 'Deep Ocean',
+    background: '#001a2e',
+    backgroundGradient: ['#001a2e', '#000d1a'],
+    pianoWhite: '#e0f4ff',
+    pianoBlack: '#001020',
+    pianoWhiteActive: '#80d4ff',
+    pianoBlackActive: '#005580',
+    pianoRim: '#002040',
+    trackColors: [
+      { base: '#00d4ff', glow: '#0099cc' },
+      { base: '#00ff88', glow: '#00cc66' },
+      { base: '#4488ff', glow: '#2255ff' },
+      { base: '#88ffee', glow: '#00ffcc' },
+      { base: '#ff8844', glow: '#ff5500' },
+      { base: '#ffdd00', glow: '#ffaa00' },
+      { base: '#aa88ff', glow: '#8855ff' },
+      { base: '#ff4488', glow: '#ff0055' },
+    ],
+    grid: 'rgba(0,200,255,0.04)',
+    text: '#00d4ff',
+  },
+  aurora: {
+    name: 'Aurora',
+    background: '#020b0a',
+    backgroundGradient: ['#020b0a', '#010806'],
+    pianoWhite: '#e8fff0',
+    pianoBlack: '#020f0a',
+    pianoWhiteActive: '#80ffaa',
+    pianoBlackActive: '#006633',
+    pianoRim: '#041a10',
+    trackColors: [
+      { base: '#00ff88', glow: '#00cc66' },
+      { base: '#88ffee', glow: '#00ffdd' },
+      { base: '#66ff44', glow: '#44ff00' },
+      { base: '#ff88aa', glow: '#ff4477' },
+      { base: '#44ffcc', glow: '#00ffaa' },
+      { base: '#ffaa44', glow: '#ff8800' },
+      { base: '#aa44ff', glow: '#8800ff' },
+      { base: '#ffee44', glow: '#ffcc00' },
+    ],
+    grid: 'rgba(0,255,100,0.04)',
+    text: '#00ff88',
+  },
+};
+
+export const THEME_NAMES = Object.keys(THEMES);
+
+export function getTheme(name) {
+  return THEMES[name] || THEMES.neon;
+}
